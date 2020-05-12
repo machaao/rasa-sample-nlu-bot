@@ -1,8 +1,9 @@
 ### A sample RASA NLU chatbot that showcases messaging types on the Machaao Platform.<br>
 
+![image](images/sample_rasa_machaao_bot.jpeg)
 
-**Setting up the sample chatbot locally to start testing:**<br>
-
+**Setting up the sample chatbot locally to start testing:**
+           
 1. Acquire for an api token and place it in the credential.yml file<br>
 
 2. Train your RASA model based on the sample set in the "data" folder
