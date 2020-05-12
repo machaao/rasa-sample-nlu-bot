@@ -1,4 +1,4 @@
-### A sample RASA NLU chatbot that showcases messaging types on the Machaao Platform.<br>
+### A sample RASA chatbot that showcases messaging types on the Machaao Platform (can be hosted on heroku)
 
 ![image](images/sample_rasa_machaao_bot.jpeg)
 
@@ -38,21 +38,6 @@ As a background process: <br>
 	ngrok http 5005
 ```
 
-7. Configure your webhook to Machaao with a simple curl command.<br>
-&lt;YOUR API-TOKEN> can be requested from the Machaao team<br>
-&lt;YOUR URL> can be found from ngrok in step 2<br>
-
-```
-	curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR API-TOKEN> \
-	--header 'api_token: <YOUR API-TOKEN>' \
-	--header 'Content-Type: application/json' \
-	--data-raw '{
-		"url": "<YOUR URL>/webhooks/machaao/incoming",
-		"description": "<YOUR BOT DESCRIPTION>",
-		"displayName": "<YOUR BOT NAME>"
-	}'
-```
-
 **Deploying your bot on a Heroku server:**<br>
 
 1. Apply for an api token from the machaao team and place it in the credential.yml file<br>
@@ -72,8 +57,9 @@ As a background process: <br>
 	heroku container:push web -a <Your App Name>
 	heroku container:push release -a <Your App Name>
 ```
-<br>
-6. Configure your Webhook to Machaao with a simple curl command.<br>
+
+**Update your webhook:**<
+Configure your Webhook to Machaao with a simple curl command.<br>
 &lt;YOUR API-TOKEN> can be requested from the Machaao team<br>
 &lt;YOUR URL> is generally a link that looks like &lt;Your App Name>.herokuapp.com<br>
 
@@ -82,7 +68,7 @@ As a background process: <br>
 	--header 'api_token: <YOUR API-TOKEN>' \
 	--header 'Content-Type: application/json' \
 	--data-raw '{
-		"url": "<YOUR URL>/webhooks/rest/webhook",
+		"url": "<YOUR URL>/webhooks/machaao/incoming",
 		"description": "<YOUR BOT DESCRIPTION>",
 		"displayName": "<YOUR BOT NAME>"
 	}'
