@@ -73,8 +73,8 @@ Update your bot url on MACHAAO with the NGROK url provided as shown below to con
 
 * Push and deploy the docker image to Heroku.
 ```
-	heroku container:push web -a <Your App Name>
-	heroku container:push release -a <Your App Name>
+	heroku container:push web -a <Your Bot Name>
+	heroku container:push release -a <Your Bot Name>
 ```
 
 ### Update your webhook ###
@@ -84,7 +84,7 @@ Update your bot url on MACHAAO with the heroku url as shown below to continue de
 	--header 'api_token: <YOUR API-TOKEN>' \
 	--header 'Content-Type: application/json' \
 	--data-raw '{
-		"url": "<Your App Name>.herokuapp.com/webhooks/machaao/incoming",
+		"url": "<Your Bot Name>.herokuapp.com/webhooks/machaao/incoming",
 		"description": "<YOUR BOT DESCRIPTION>",
 		"displayName": "<YOUR BOT NAME>"
 	}'
