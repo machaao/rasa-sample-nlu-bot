@@ -57,21 +57,46 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
     }'
 ```
 
-## Remote Setup via Heroku (Optional) ##
+## Remote Setup via Heroku CLI (Optional) ##
 
 * Apply for an api token from the machaao team and place it in the credential.yml.
+* Install Heroku CLI for your OS
 * Sign up for free on Heroku.
+* Login to Heroku
+```
+heroku login
+```
 * Create a new app on Heroku and note down the app name.
-* Use the docker image supplied as part for this project.
-
-```
-docker build -t herokurasa .
-```
 
 * Push and deploy the docker image to Heroku.
 ```
-heroku container:push web -a <Your Bot Name>
-heroku container:push release -a <Your Bot Name>
+heroku create
+```
+
+* Login to Heroku Container Service
+```
+heroku container:login
+```
+
+* Build the image and push to Container Registry
+```
+heroku container:push web
+```
+* Then release the image to your heroku app
+```
+heroku container:push release
+```
+* Open the app
+```
+heroku open
+```
+
+
+
+
+* Build locally (optional)
+```
+docker build -t herokurasa .
 ```
 
 ### Update your webhook ###
