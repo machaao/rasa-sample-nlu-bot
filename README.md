@@ -3,7 +3,7 @@ This RASA based Sample NLU chatbot intends to showcase various RCS-esque messagi
 
 ![image](images/sample_rasa_machaao_bot.jpeg)
 
-## Local Setup ##
+## Running from Source ##
 * Download or clone this repository
            
 * Get an api token via https://messengerx.io and place in the credential.yml
@@ -57,7 +57,7 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
     }'
 ```
 
-## Remote Setup via Heroku CLI (Optional) ##
+## Running via Heroku CLI (Optional) ##
 
 * Apply for an api token from the machaao team and place it in the credential.yml.
 * Install Heroku CLI for your OS
@@ -90,11 +90,7 @@ heroku container:push release
 ```
 heroku open
 ```
-
-
-
-
-* Build locally (optional)
+* Build locally docker image (optional)
 ```
 docker build -t herokurasa .
 ```
