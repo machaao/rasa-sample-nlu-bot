@@ -1,5 +1,5 @@
 # A sample RASA chatbot built using MACHAAO Platform
-This RASA based NLU chatbot intends to showcase various RCS-esque messaging options available on the Machaao Platform
+This RASA based Sample NLU chatbot intends to showcase various RCS-esque messaging options available on the Machaao Platform
 
 ![image](images/sample_rasa_machaao_bot.jpeg)
 
