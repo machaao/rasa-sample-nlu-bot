@@ -6,7 +6,7 @@ cd app
 
 #rasa train nlu
 
-rasa run actions --actions actions&
+rasa run actions --actions actions &
 
 # Start rasa server with nlu model
 rasa run --model /app/models --enable-api \

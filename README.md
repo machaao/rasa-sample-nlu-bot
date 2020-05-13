@@ -13,7 +13,7 @@ connectors.MachaaoConnector.MachaaoInputChannel:
     base_url: "https://ganglia-dev.machaao.com"
 ```
 
-### Train the sample model ###
+### Train the sample model (Optional - A trained model is checked in) ###
 Train your RASA model based on the sample set in the "data" folder
 ```
 rasa train nlu 
