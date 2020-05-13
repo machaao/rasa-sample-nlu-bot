@@ -90,7 +90,7 @@ heroku container:push web
 ```
 * Then release the image to your heroku app
 ```
-heroku container:push release
+heroku container:release web
 ```
 * Open the app
 ```

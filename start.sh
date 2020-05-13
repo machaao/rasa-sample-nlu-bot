@@ -2,9 +2,9 @@
 
 cd app
 
-rm -rf models
+#rm -rf models
 
-rasa train nlu
+#rasa train nlu
 
 rasa run actions --actions actions&
 
