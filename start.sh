@@ -2,6 +2,10 @@
 
 cd app
 
+rm -rf models
+
+rasa train nlu
+
 rasa run actions --actions actions&
 
 # Start rasa server with nlu model
