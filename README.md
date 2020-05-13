@@ -30,7 +30,6 @@ rasa run actions
 ```
 rasa run actions &
 ```
-<br>
 
 ### Start RASA Core Service ###
 Start rasa core and specify the custom connector.<br>
