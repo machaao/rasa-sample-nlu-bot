@@ -39,9 +39,7 @@ rasa run -m models --enable-api --cors “*” --connector "connectors.MachaaoCo
 
 ### Install NGROK - For Dynamic DNS (Required) ###
 * Install ngrok for your OS via https://ngrok.com/download.
-
 * Run ngrok on port 5005 with the following command, and note the generated https url
-
 ```
 ngrok http 5005
 ```
@@ -53,10 +51,10 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
 --header 'api_token: <YOUR API-TOKEN>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"url": "<YOUR URL>/webhooks/machaao/incoming",
-"description": "<YOUR BOT DESCRIPTION>",
-"displayName": "<YOUR BOT NAME>"
-}'
+    "url": "<YOUR URL>/webhooks/machaao/incoming",
+    "description": "<YOUR BOT DESCRIPTION>",
+    "displayName": "<YOUR BOT NAME>"
+    }'
 ```
 
 ## Remote Setup via Heroku (Optional) ##
@@ -83,8 +81,8 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
 --header 'api_token: <YOUR API-TOKEN>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"url": "<Your Bot Name>.herokuapp.com/webhooks/machaao/incoming",
-"description": "<YOUR BOT DESCRIPTION>",
-"displayName": "<YOUR BOT NAME>"
-}'
+    "url": "<Your Bot Name>.herokuapp.com/webhooks/machaao/incoming",
+    "description": "<YOUR BOT DESCRIPTION>",
+    "displayName": "<YOUR BOT NAME>"
+    }'
 ```
