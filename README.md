@@ -84,7 +84,7 @@ Update your bot url on MACHAAO with the heroku url as shown below to continue de
 	--header 'api_token: <YOUR API-TOKEN>' \
 	--header 'Content-Type: application/json' \
 	--data-raw '{
-		"url": "<YOUR URL>/webhooks/machaao/incoming",
+		"url": "<Your App Name>.herokuapp.com/webhooks/machaao/incoming",
 		"description": "<YOUR BOT DESCRIPTION>",
 		"displayName": "<YOUR BOT NAME>"
 	}'
