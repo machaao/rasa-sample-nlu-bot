@@ -6,7 +6,7 @@ This RASA based NLU chatbot intends to showcase various RCS-esque messaging opti
 ## Requirements ##
 * Download or clone this repository
            
-* Acquire for an api token and place in the credential.yml
+* Get an api token via https://messengerx.io and place in the credential.yml
 ```
   connectors.MachaaoConnector.MachaaoInputChannel:
     api_token: <YOUR API-TOKEN>
@@ -39,7 +39,7 @@ Start rasa core and specify the custom connector.<br>
 ```
 
 ## Install NGROK - For Dynamic DNS (Required) ##
-* Install ngrok on your OS from [https://ngrok.com/download](https://ngrok.com/download), and place it in the project directory.<br>
+* Install ngrok for your OS via https://ngrok.com/download, and place it in the project directory.<br>
 
 * Run ngrok on port 5005 with the following command, and note the generated https url.<br>
 
