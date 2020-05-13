@@ -8,7 +8,7 @@ This RASA based Sample NLU chatbot intends to showcase various RCS-esque messagi
            
 * Get an api token via https://messengerx.io and place in the credential.yml
 ```
-  connectors.MachaaoConnector.MachaaoInputChannel:
+connectors.MachaaoConnector.MachaaoInputChannel:
     api_token: <YOUR API-TOKEN>
     base_url: "https://ganglia-dev.machaao.com"
 ```
