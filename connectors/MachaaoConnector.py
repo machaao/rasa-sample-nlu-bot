@@ -14,10 +14,10 @@ base_url = ""
 
 
 class MachaaoInputChannel(InputChannel):
-    """A custom http input channel.
+    """A custom http input channel for MACHAAO Platform
     "" Credits: Darren Yau (darren@machaao.com)
     This implementation is the basis for a custom implementation of a chat
-    frontend. You can customize this to send messages to Rasa Core and
+    frontend. You can customize this to send messages to RASA Core and
     retrieve responses from the agent."""
 
     @classmethod
@@ -57,7 +57,6 @@ class MachaaoInputChannel(InputChannel):
 
         @custom_webhook.route("/", methods=["GET"])
         async def health(request: Request):
-
             return response.json({"status": "ok"})
 
         @custom_webhook.route("/incoming", methods=["POST"])
@@ -95,10 +94,14 @@ class MachaaoOutputChannel(OutputChannel):
         self, recipient_id: Text, text: Text, **kwargs: Any
     ) -> None:
         API_ENDPOINT = base_url + "/v1/messages/send"
+
+        print("calling: " + API_ENDPOINT + " with text: " + text)
+
         headers = {
             "api_token": api_token,
             "Content-Type": "application/json"
         }
+
         data = {
             "users": [recipient_id],
             "identifier": "BROADCAST_FB_QUICK_REPLIES",
