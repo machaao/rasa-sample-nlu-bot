@@ -112,3 +112,8 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
     "displayName": "<YOUR BOT NAME>"
     }'
 ```
+
+## Web Demo ##
+A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been made available for testing purposes
+![image](images/sample_rasa_web_bot.png)
+
