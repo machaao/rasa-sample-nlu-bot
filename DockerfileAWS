@@ -1,0 +1,30 @@
+FROM ubuntu:18.04
+
+
+RUN apt-get update && apt-get install -y python3 python3-pip
+RUN python3 -m pip install --upgrade pip
+
+
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+RUN pip install rasa==1.7.0
+
+## Dependency issue with Rasa
+RUN pip install gym==0.15.4
+
+ADD ./actions /app/actions/
+ADD ./data /app/data/
+ADD ./models /app/models/
+ADD ./config /app/config/
+ADD ./connectors /app/connectors
+ADD ./start.sh /app/start.sh
+ADD ./domain.yml /app/
+ADD ./config.yml /app/
+
+RUN chmod +x /app/scripts/*
+
+EXPOSE 5005
+
+ENTRYPOINT []
+CMD /app/scripts/start_services.sh
