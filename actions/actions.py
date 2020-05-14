@@ -15,11 +15,15 @@ import yaml
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+import os.path
+abs_path = os.path.abspath(os.path.dirname(__file__))
 
 base_url = ""
 api_token = ""
 
-with open("credentials.yml") as file:
+path = os.path.join(abs_path, "../config/credentials.yml")
+
+with open(path) as file:
     credentials = yaml.load(file, Loader=yaml.FullLoader)
     base_url = credentials["connectors.MachaaoConnector.MachaaoInputChannel"]["base_url"]
     api_token = credentials["connectors.MachaaoConnector.MachaaoInputChannel"]["api_token"]

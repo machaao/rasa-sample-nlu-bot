@@ -12,11 +12,11 @@ RUN pip3 install -r requirements.txt
 ADD ./actions /app/actions/
 ADD ./data /app/data/
 ADD ./models /app/models/
+ADD ./config /app/config/
+ADD ./connectors /app/connectors
 ADD ./start.sh /app/start.sh
 ADD ./domain.yml /app/
 ADD ./config.yml /app/
-ADD ./credentials.yml /app/
-ADD ./connectors/MachaaoConnector.py /app/connectors/MachaaoConnector.py
 
 RUN chmod +x /app/start.sh
 

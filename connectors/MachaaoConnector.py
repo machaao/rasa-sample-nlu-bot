@@ -61,10 +61,12 @@ class MachaaoInputChannel(InputChannel):
 
         @custom_webhook.route("/incoming", methods=["POST"])
         async def receive(request: Request):
+            logger.info("incoming req")
             sender_id = await self._extract_sender(request)
             text = self._extract_message(request)
             collector = MachaaoOutputChannel()
             try:
+                logger.info("incoming request -> forwarded")
                 await on_new_message(
                     UserMessage(
                         text, collector, sender_id, input_channel=self.name()
@@ -76,6 +78,7 @@ class MachaaoInputChannel(InputChannel):
                     "user message '{}'.".format(text)
                 )
             return response.text("Bot message delivered.")
+
         return custom_webhook
 
 
@@ -95,7 +98,7 @@ class MachaaoOutputChannel(OutputChannel):
     ) -> None:
         API_ENDPOINT = base_url + "/v1/messages/send"
 
-        print("calling: " + API_ENDPOINT + " with text: " + text)
+        logger.info("calling: " + API_ENDPOINT + " with text: " + text)
 
         headers = {
             "api_token": api_token,
