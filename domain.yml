@@ -32,14 +32,22 @@ intents:
 responses:
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
+    text: 'Here is something to cheer that will cheer you up...'
+    buttons:
+      - title: "👋"
+        payload: "hi"
   utter_did_that_help:
   - text: Did that help you?
+    buttons:
+      - title: "👋"
+        payload: "hi"
   utter_goodbye:
   - text: Bye
   utter_greet:
-  - text: Hey! How are you? Here are some sample supported commands.\n Press 👋 any time
+  - text: Hey! How are you? Here are some sample supported commands
     buttons:
+      - title: "👋"
+        payload: "hi"
       - title: "Sample Text Action"
         payload: "Sample Text"
       - title: "Sample Image Action"
@@ -49,7 +57,10 @@ responses:
       - title: "Sample Button Action"
         payload: "Sample Button"
   utter_happy:
-  - text: Great, carry on!
+  - text: Great, Don't worry be happy is my moto as well!
+    buttons:
+      - title: "👋"
+        payload: "hi"
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
 session_config:
