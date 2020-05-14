@@ -6,7 +6,7 @@ This RASA based Sample NLU chatbot intends to showcase various RCS-esque messagi
 ## Running on Local ##
 * Download or clone this repository
            
-* You can acquire a FREE API token via https://messengerx.io or by [emailing us](connect@machaao.com) and replace it in the config/credential.yml
+* You can acquire a FREE API token via https://messengerx.io or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credential.yml
 ```
 connectors.MachaaoConnector.MachaaoInputChannel:
     api_token: <YOUR API-TOKEN>
