@@ -38,7 +38,7 @@ responses:
   utter_goodbye:
   - text: Bye
   utter_greet:
-  - text: Hey! How are you? Here are a couple sample
+  - text: Hey! How are you? Here are some sample supported commands.\n Press 👋 any time
     buttons:
       - title: "Sample Text Action"
         payload: "Sample Text"
