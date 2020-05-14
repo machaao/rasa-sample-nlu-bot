@@ -73,7 +73,7 @@ docker build -t herokurasa .
 ```
 heroku login
 ```
-* Create a new app on Heroku and note down the app name.
+* Create a new app on Heroku and note down your heroku app name
 
 * Push and deploy the docker image to Heroku.
 ```
@@ -98,7 +98,7 @@ heroku container:release web
 heroku open
 ```
 
-* Note down your <Your Heroku App Name>
+
 
 ### Update your webhook ###
 Update your bot url on MACHAAO with the heroku url as shown below to continue development
@@ -107,13 +107,15 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
 --header 'api_token: <YOUR API-TOKEN>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "url": "<Your Heroku App Name>.herokuapp.com/webhooks/machaao/incoming",
+    "url": "<Your_Heroku_App_Name>.herokuapp.com/webhooks/machaao/incoming",
     "description": "<YOUR BOT DESCRIPTION>",
     "displayName": "<YOUR BOT NAME>"
     }'
 ```
 
 ## Web Demo ##
+
 A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been made available for testing purposes
+
 ![image](images/sample_rasa_web_bot.png)
 
