@@ -13,11 +13,6 @@ connectors.MachaaoConnector.MachaaoInputChannel:
     base_url: "https://ganglia-dev.machaao.com"
 ```
 
-### Re-Train the sample model (Optional - A trained model is checked in) ###
-In order to re-train your RASA model based on the sample set in the "data" folder
-```
-rasa train
-```
 ### Start the RASA Action Service ###
 Start your the action service either in a separate terminal or in the same tab as a background process.<br>
 
@@ -57,17 +52,23 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
     }'
 ```
 
+
+### Re-Train the sample model ###
+In order to re-train your RASA model based on the sample files provided in the "data" folder
+```
+rasa train
+```
+
 ## Build local docker image ##
 * Build locally docker image (optional)
 ```
 docker build -t herokurasa .
 ```
 
-## Running via Heroku CLI (Optional) ##
-
-* Apply for an api token from the machaao team and place it in the credential.yml.
+## Running on Heroku (Optional) ##
 * Install Heroku CLI for your OS
-* Sign up for free on Heroku.
+* We are assuming you have an heroku account.
+* Assuming you have already acquired an api token from the machaao team, replace it in the config/credential.yml
 * Login to Heroku
 ```
 heroku login
@@ -97,6 +98,7 @@ heroku container:release web
 heroku open
 ```
 
+* Note down your <Your Heroku App Name>
 
 ### Update your webhook ###
 Update your bot url on MACHAAO with the heroku url as shown below to continue development
@@ -105,7 +107,7 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
 --header 'api_token: <YOUR API-TOKEN>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "url": "<Your Bot Name>.herokuapp.com/webhooks/machaao/incoming",
+    "url": "<Your Heroku App Name>.herokuapp.com/webhooks/machaao/incoming",
     "description": "<YOUR BOT DESCRIPTION>",
     "displayName": "<YOUR BOT NAME>"
     }'
