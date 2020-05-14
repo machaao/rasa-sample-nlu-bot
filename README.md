@@ -13,10 +13,10 @@ connectors.MachaaoConnector.MachaaoInputChannel:
     base_url: "https://ganglia-dev.machaao.com"
 ```
 
-### Train the sample model (Optional - A trained model is checked in) ###
-Train your RASA model based on the sample set in the "data" folder
+### Re-Train the sample model (Optional - A trained model is checked in) ###
+In order to re-train your RASA model based on the sample set in the "data" folder
 ```
-rasa train nlu 
+rasa train
 ```
 ### Start the RASA Action Service ###
 Start your the action service either in a separate terminal or in the same tab as a background process.<br>
