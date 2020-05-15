@@ -32,7 +32,7 @@ Screenshot of the sample RASA chatbot running via our Android SDK
 ## SDK Integration Guide ##
 Please follow the SDK guide @ https://github.com/machaao/machaao-samples
 
-## Running from source ##
+## Run on Local (from source) ##
 * Download or clone this repository
 ```
 git clone git@github.com:machaao/rasa-sample-nlu-bot.git 
@@ -87,7 +87,7 @@ rasa train
 
 
 
-## Deploy to Heroku ##
+## Run on Heroku ##
 We are assuming you have access to a [heroku account](https://heroku.com)
 and have installed heroku command line client for your OS.
 
@@ -140,7 +140,7 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
     }'
 ```
 
-## Deploy to AWS ##
+## Run on AWS ##
 Coming Soon
 
 ## Note ##
