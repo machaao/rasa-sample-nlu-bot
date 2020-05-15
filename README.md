@@ -18,13 +18,8 @@ Screenshot of the sample RASA chatbot running via our Android SDK
 
 ![image](images/sample_rasa_android_bot.png)
 
-## SDK Integration Guide ##
-Please follow the SDK guide @ https://github.com/machaao/machaao-samples
-
-## Setup the chatbot (using source) ##
-* Download or clone this repository
-           
-* You can acquire a FREE API token via https://messengerx.io 
+### Get your FREE API Key ###
+* You can acquire a FREE API Key via https://messengerx.io 
 or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credential.yml
 ```
 connectors.MachaaoConnector.MachaaoInputChannel:
@@ -32,7 +27,12 @@ connectors.MachaaoConnector.MachaaoInputChannel:
     base_url: "https://ganglia-dev.machaao.com"
 ```
 
-* You can run the code as it is, and it will use the Sample Bot API token.
+## SDK Integration Guide ##
+Please follow the SDK guide @ https://github.com/machaao/machaao-samples
+
+## Setup the chatbot (using source) ##
+* Download or clone this repository
+* You can run the code as it is, and it will use the provided Sample Bot API token.
 
 ### Start the RASA Action Service ###
 Start your the action service either in a separate terminal or in the same tab as a background process.<br>
