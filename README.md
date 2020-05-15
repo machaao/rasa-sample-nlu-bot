@@ -13,11 +13,6 @@ A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been m
 
 ![image](images/sample_rasa_web_bot.png)
 
-## Android Sample Screenshot ##
-Screenshot of the sample RASA chatbot running via our Android SDK
-
-![image](images/sample_rasa_android_bot.png)
-
 ### Get your FREE API Key ###
 * You can acquire a FREE API Key via https://messengerx.io 
 or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credential.yml
@@ -27,10 +22,15 @@ connectors.MachaaoConnector.MachaaoInputChannel:
     base_url: "https://ganglia-dev.machaao.com"
 ```
 
+## Android Sample Screenshot ##
+Screenshot of the sample RASA chatbot running via our Android SDK
+
+![image](images/sample_rasa_android_bot.png)
+
 ## SDK Integration Guide ##
 Please follow the SDK guide @ https://github.com/machaao/machaao-samples
 
-## Setup the chatbot (using source) ##
+## Running from source ##
 * Download or clone this repository
 * You can run the code as it is, and it will use the provided Sample Bot API token.
 
@@ -83,7 +83,7 @@ rasa train
 
 
 
-## Running on Heroku (Optional) ##
+## Deploy to Heroku ##
 We are assuming you have access to a [heroku](https://heroku.com) account.
 
 * Install Heroku CLI for your OS
@@ -95,7 +95,7 @@ heroku login
 
 Create a new app on Heroku and note down your heroku app name
 
-### Build & Deploy to Heroku (Docker based) ###
+### Build & Deploy to Heroku (Docker Based) ###
 ```
 docker build -t herokurasa .
 ```
