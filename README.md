@@ -5,13 +5,13 @@ This RASA based Sample NLU chatbot intends to showcase various RCS-esque messagi
 
 The intent of the document is to provide with a quick and fast development setup guide for python developers looking to develop deeply personalized chat bots.
 
-![image](images/sample_rasa_machaao_bot.jpeg)
+![figure](images/sample_rasa_machaao_bot.jpeg)
 
 
 ## Web SDK Demo ##
 A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been made available for testing purposes
 
-![image](images/sample_rasa_web_bot.png)
+![figure](images/sample_rasa_web_bot.png)
 
 ## Get your FREE API Key ##
 * You can acquire a FREE API Key via https://messengerx.io 
@@ -27,7 +27,7 @@ connectors.MachaaoConnector.MachaaoInputChannel:
 ## Android Sample Screenshot ##
 Screenshot of the sample RASA chatbot running via our Android SDK
 
-![image](images/sample_rasa_android_bot.png)
+![figure](images/sample_rasa_android_bot.png)
 
 ## SDK Integration Guide ##
 Please follow the SDK guide @ https://github.com/machaao/machaao-samples
@@ -88,9 +88,8 @@ rasa train
 
 
 ## Deploy to Heroku ##
-We are assuming you have access to a [heroku](https://heroku.com) account.
-
-* Install Heroku CLI for your OS
+We are assuming you have access to a [heroku account](https://heroku.com)
+and have installed heroku command line client for your OS.
 
 ### Login to Heroku ###
 ```
@@ -99,32 +98,33 @@ heroku login
 
 Create a new app on Heroku and note down your heroku app name
 
-### Build & Deploy to Heroku (Docker Based) ###
-```
-docker build -t herokurasa .
-```
-
-* Push and deploy the docker image to Heroku.
+### Push and deploy the docker image to Heroku ###
 ```
 heroku create
 ```
 
-* Login to Heroku Container Service
+### Build the docker image ###
+```
+docker build -t herokurasa .
+```
+
+### Login to Heroku Container Service ###
 ```
 heroku container:login
 ```
 
-* Build the image and push to Container Registry
+### Push to Container Registry ###
 ```
 heroku container:push web
 ```
-* Then release the image to your heroku app
+### Release the image to your heroku app ###
 ```
 heroku container:release web
 ```
-* Open the app
+### Open the heroku app or open the logs to confirm ###
 ```
 heroku open
+heroku logs --tail
 ```
 
 ## Update your webhook ##
