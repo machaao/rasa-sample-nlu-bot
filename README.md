@@ -13,7 +13,7 @@ A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been m
 
 ![image](images/sample_rasa_web_bot.png)
 
-## Android SDK ##
+## Android Sample Screenshot ##
 ![image](images/sample_rasa_android_bot.png)
 
 ## Android / Web - SDK Integration Guide ##
