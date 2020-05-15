@@ -14,9 +14,10 @@ A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been m
 ![image](images/sample_rasa_web_bot.png)
 
 ## Android Sample Screenshot ##
+The below is a screenshot of the sample RASA bot running on Android
 ![image](images/sample_rasa_android_bot.png)
 
-## Android / Web - SDK Integration Guide ##
+## SDK Integration Guide ##
 Please follow the SDK guide @ https://github.com/machaao/machaao-samples
 
 ## Setup the chatbot (using source) ##
