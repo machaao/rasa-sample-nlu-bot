@@ -13,7 +13,7 @@ A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been m
 
 ![image](images/sample_rasa_web_bot.png)
 
-### Get your FREE API Key ###
+## Get your FREE API Key ##
 * You can acquire a FREE API Key via https://messengerx.io 
 or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credential.yml
 ```
