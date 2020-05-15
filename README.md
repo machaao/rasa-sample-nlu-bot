@@ -3,7 +3,7 @@
 
 This RASA based Sample NLU chatbot intends to showcase various RCS-esque messaging options available on the Machaao Platform
 
-The intent of the document is to provide with a quick and fast development setup for developers looking to develop deeply personalized chat bots.
+The intent of the document is to provide with a quick and fast development setup guide for python developers looking to develop deeply personalized chat bots.
 
 ![image](images/sample_rasa_machaao_bot.jpeg)
 
