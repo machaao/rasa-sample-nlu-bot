@@ -22,6 +22,8 @@ connectors.MachaaoConnector.MachaaoInputChannel:
     base_url: "https://ganglia-dev.machaao.com"
 ```
 
+* You can run the code as it is, and it will use the provided Sample Token.
+
 ## Android Sample Screenshot ##
 Screenshot of the sample RASA chatbot running via our Android SDK
 
@@ -32,7 +34,6 @@ Please follow the SDK guide @ https://github.com/machaao/machaao-samples
 
 ## Running from source ##
 * Download or clone this repository
-* You can run the code as it is, and it will use the provided Sample Bot API token.
 
 ### Start the RASA Action Service ###
 Start your the action service either in a separate terminal or in the same tab as a background process.<br>
