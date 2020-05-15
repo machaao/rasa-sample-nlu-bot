@@ -13,6 +13,12 @@ A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been m
 
 ![image](images/sample_rasa_web_bot.png)
 
+## Android SDK ##
+![image](images/sample_rasa_android_bot.png)
+
+## Android / Web - SDK Integration Guide ##
+Please follow the SDK guide @ https://github.com/machaao/machaao-samples
+
 ## Setup the chatbot (using source) ##
 * Download or clone this repository
            
@@ -130,9 +136,6 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
 
 ## Deploy to AWS ##
 Coming Soon
-
-## Custom Android / Web - SDK Integration Guide ##
-Please follow the SDK guide @ https://github.com/machaao/machaao-samples
 
 ## Note ##
 Please not that this document isn't mean to be use as a guide for production environment setup and nor it's intended for that purpose.
