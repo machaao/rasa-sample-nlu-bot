@@ -34,6 +34,9 @@ Please follow the SDK guide @ https://github.com/machaao/machaao-samples
 
 ## Running from source ##
 * Download or clone this repository
+```
+git clone git@github.com:machaao/rasa-sample-nlu-bot.git 
+```
 
 ### Start the RASA Action Service ###
 Start your the action service either in a separate terminal or in the same tab as a background process.<br>
