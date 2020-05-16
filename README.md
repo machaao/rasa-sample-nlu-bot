@@ -24,13 +24,13 @@ connectors.MachaaoConnector.MachaaoInputChannel:
 
 * You can run the code as it is, and it will use the provided Sample Token.
 
-## Android Sample Screenshot ##
+## Android Sample App Screenshot ##
 Screenshot of the sample RASA chatbot running via our Android SDK
 
 ![figure](images/sample_rasa_android_bot.png)
 
 ## SDK Integration Guide ##
-Please follow the SDK guide @ https://github.com/machaao/machaao-samples
+Please follow the SDK guide along with android + web integration sample @ https://github.com/machaao/machaao-samples
 
 ## Run on Local (from source) ##
 * Download or clone this repository
