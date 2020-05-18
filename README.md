@@ -1,5 +1,5 @@
 
-# A sample RASA chatbot template for MACHAAO Mini Apps Messaging Platform
+# A sample RASA chatbot template for MACHAAO Mini Apps Messaging Platform (In Progress)
 
 This RASA based Sample NLU chatbot intends to showcase various RCS-esque messaging options available on the Machaao Platform
 
