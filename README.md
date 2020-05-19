@@ -1,5 +1,5 @@
 
-# A sample RASA chatbot template for MACHAAO Mini Apps Messaging Platform
+# A sample RASA chatbot template for MACHAAO Mini Apps Messaging Platform (In Progress)
 
 This RASA based Sample NLU chatbot intends to showcase various RCS-esque messaging options available on the Machaao Platform
 
@@ -15,7 +15,7 @@ A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been m
 
 ## Get your FREE API Key ##
 * You can acquire a FREE API Key via https://messengerx.io 
-or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credential.yml
+or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credentials.yml
 ```
 connectors.MachaaoConnector.MachaaoInputChannel:
     api_token: <YOUR API-TOKEN>
