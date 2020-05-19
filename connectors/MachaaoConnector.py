@@ -42,7 +42,7 @@ class MachaaoInputChannel(InputChannel):
         decoded_jwt = None
         body = json.loads(req.body)
 
-        logger.info("raw json: " + req.body)
+        logger.info("raw json: " + str(req.body))
 
         if body and body["raw"]:
             decoded_jwt = jwt.decode(body["raw"], api_token, algorithm='HS512')
@@ -50,7 +50,7 @@ class MachaaoInputChannel(InputChannel):
         if type(text) == str:
             text = json.loads(decoded_jwt["sub"])
 
-        logger.info("decoded json: " + text)
+        logger.info("decoded json: " + str(text))
 
         return text["messaging"][0]["message_data"]["text"]
 

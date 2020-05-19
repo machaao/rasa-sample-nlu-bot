@@ -43,12 +43,12 @@ Start your the action service either in a separate terminal or in the same tab a
 
 * In a separate terminal:
 ```
-rasa run actions
+rasa run actions --actions actions
 ```
 
 * As a background process:
 ```
-rasa run actions &
+rasa run actions --actions actions &
 ```
 
 ### Start RASA Core Service ###
