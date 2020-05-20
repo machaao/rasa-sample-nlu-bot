@@ -54,7 +54,7 @@ rasa run actions --actions actions &
 ### Start RASA Core Service ###
 Start rasa core and specify the custom connector.<br>
 ```
-rasa run -m models --enable-api --cors “*” --connector "connectors.MachaaoConnector.MachaaoInputChannel"
+rasa run -m models --debug --endpoints config/endpoints.yml --credentials config/credentials.yml --enable-api --cors “*” --connector "connectors.MachaaoConnector.MachaaoInputChannel"
 ```
 
 ### Install NGROK - For Dynamic DNS (Required) ###
