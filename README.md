@@ -1,5 +1,5 @@
 
-# A sample RASA chatbot template using MACHAAO Chat Apps Messaging Platform
+# A sample RASA chatbot template using MACHAAO Chat Apps Platform
 The intent of the document is to provide with a quick and fast development setup guide for python developers looking to develop deeply personalized chat bots on Android & Web
 
 This RASA based Sample NLU chatbot also intends to showcase various RCS-esque messaging options available on the Machaao Platform
