@@ -1,3 +1,4 @@
+[![Gitter](https://badges.gitter.im/messengerx-io/community.svg)](https://gitter.im/messengerx-io/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  
 
 ## A sample RASA chatbot template using MACHAAO Chat Apps Platform ##
 The intent of the document is to provide with a quick and fast development setup guide for python developers looking to develop deeply personalized chat bots on Android & Web
