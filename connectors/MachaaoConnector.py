@@ -9,8 +9,8 @@ import json
 import requests
 
 logger = logging.getLogger(__name__)
-api_token = ""
-base_url = ""
+api_token = "b5b00d70-cf3d-11ea-bf3b-c5f080fdb341"
+base_url = "https://ganglia-dev.machaao.com"
 
 
 class MachaaoInputChannel(InputChannel):
@@ -27,9 +27,9 @@ class MachaaoInputChannel(InputChannel):
     @classmethod
     def from_credentials(cls, credentials):
         global api_token
-        api_token= credentials.get("api_token")
+        api_token= api_token
         global base_url
-        base_url= credentials.get("base_url")
+        base_url= base_url
         return cls()
 
     async def _extract_sender(self, req) -> Optional[Text]:

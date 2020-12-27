@@ -1,1 +1,8 @@
 theme: jekyll-theme-cayman
+
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 200
+  - name: RulePolicy

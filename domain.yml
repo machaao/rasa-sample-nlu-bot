@@ -1,34 +1,26 @@
-actions:
-- action_send_buttons
-- action_send_carousel
-- action_send_image
-- action_send_text
-- utter_cheer_up
-- utter_did_that_help
-- utter_goodbye
-- utter_greet
-- utter_happy
-- utter_iamabot
+version: "2.0"
+
 intents:
-- send_sample_text:
-    triggers: action_send_text
-- greet
-- send_sample_carousel:
-    triggers: action_send_carousel
-- send_sample_buttons:
-    triggers: action_send_buttons
-- send_sample_image:
-    triggers: action_send_image
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- send_text
-- send_image
-- send_carousel
-- send_buttons
+  - send_sample_text:
+      triggers: action_send_text
+  - greet
+  - send_sample_carousel:
+      triggers: action_send_carousel
+  - send_sample_buttons:
+      triggers: action_send_buttons
+  - send_sample_image:
+      triggers: action_send_image
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - send_text
+  - send_image
+  - send_carousel
+  - send_buttons
+
 responses:
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
