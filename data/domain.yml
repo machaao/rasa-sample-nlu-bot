@@ -1,0 +1,61 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - send_text
+  - send_image
+  - send_carousel
+  - send_buttons
+  - send_sample_text:
+      triggers: action_send_text
+  - send_sample_carousel:
+      triggers: action_send_carousel
+  - send_sample_buttons:
+      triggers: action_send_buttons
+  - send_sample_image:
+      triggers: action_send_image
+
+responses:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer that will cheer you up...'
+    buttons:
+      - title: "👋"
+        payload: "hi"
+  utter_did_that_help:
+  - text: Did that help you?
+    buttons:
+      - title: "👋"
+        payload: "hi"
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you? Here are some sample supported commands
+    buttons:
+      - title: "👋"
+        payload: "hi"
+      - title: "Sample Text Action"
+        payload: "Sample Text"
+      - title: "Sample Image Action"
+        payload: "Sample Image"
+      - title: "Sample Carousel Action"
+        payload: "Sample Carousel"
+      - title: "Sample Button Action"
+        payload: "Sample Button"
+  utter_happy:
+  - text: Great, Don't worry be happy is my moto as well!
+    buttons:
+      - title: "👋"
+        payload: "hi"
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -9,12 +9,114 @@ nlu:
     - hello there
     - good morning
     - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
 
 - intent: goodbye
   examples: |
-    - bye
-    - see you later
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
     - good night
+    - bye
+    - goodbye
     - have a nice day
     - see you around
+    - bye bye
     - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: send_sample_text
+  examples: |
+    - sample text
+    - text
+    - send me a sample text message
+    - example of text action
+
+- intent: send_sample_image
+  examples: |
+    - sample image
+    - image
+    - send me a sample image
+    - example of image action
+    - Sample Image
+
+- intent: send_sample_carousel
+  examples: |
+    - sample carousel
+    - carousel
+    - send me a sample carousel message
+    - example of carousel action
+    - sample caruosel
+
+- intent: send_sample_buttons
+  examples: |
+    - sample button
+    - buttons
+    - send me a sample button message
+    - example of button action

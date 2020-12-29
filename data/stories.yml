@@ -6,7 +6,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_greet
+  - intent: mood_great
   - action: utter_happy
 
 - story: sad path 1
@@ -28,34 +28,3 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
-
-
-- story: say goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: bot challenge
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
-- story: sample button action
-  steps:
-  - intent: send_sample_buttons
-  - action: action_send_buttons
-
-- story: sample image action
-  steps:
-  - intent: send_sample_image
-  - action: action_send_image
-
-- story: sample carousel action
-  steps:
-  - intent: send_sample_carousel
-  - action: action_send_carousel
-
-- story: sample text action
-  steps:
-  - intent: send_sample_text
-  - action: action_send_text
