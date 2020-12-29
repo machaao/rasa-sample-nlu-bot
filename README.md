@@ -83,7 +83,7 @@ curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR AP
 In order to re-train your RASA model based on the sample files provided in the "data" folder
 ```
 rm -rf models/*
-rasa train
+rasa train --domain domain.yml
 ```
 
 
