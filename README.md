@@ -14,15 +14,6 @@ A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been m
 
 ![figure](images/sample_rasa_web_bot.png)
 
-## Get your FREE API Key ##
-* You can acquire a FREE API Key via https://messengerx.io 
-or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credentials.yml
-```
-connectors.MachaaoConnector.MachaaoInputChannel:
-    api_token: <YOUR API-TOKEN>
-    base_url: "https://ganglia-dev.machaao.com"
-```
-
 * You can run the code as it is, and it will use the provided Sample Token.
 
 ## Android Sample App Screenshot ##
@@ -36,7 +27,23 @@ Please follow the SDK guide along with android + web integration sample @ https:
 ## Run on Local (from source) ##
 * Download or clone this repository
 ```
-git clone git@github.com:machaao/rasa-sample-nlu-bot.git 
+git clone git@github.com:machaao/rasa-sample-nlu-bot.git
+
+cd rasa-sample-nlu-bot
+```
+
+* Install requirements
+```bash
+pip install -r requirements.txt
+```
+
+## Get your FREE API Key ##
+* You can acquire a FREE API Key via https://messengerx.io 
+or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credentials.yml
+```
+connectors.MachaaoConnector.MachaaoInputChannel:
+    api_token: <YOUR API-TOKEN>
+    base_url: "https://ganglia-dev.machaao.com"
 ```
 
 ### Start the RASA Action Service ###
@@ -47,7 +54,7 @@ Start your the action service either in a separate terminal or in the same tab a
 rasa run actions --actions actions
 ```
 
-* As a background process:
+* Or as a background process:
 ```
 rasa run actions --actions actions &
 ```
@@ -58,25 +65,20 @@ Start rasa core and specify the custom connector.<br>
 rasa run -m models --debug --endpoints config/endpoints.yml --credentials config/credentials.yml --enable-api --cors “*” --connector "connectors.MachaaoConnector.MachaaoInputChannel"
 ```
 
-### Install NGROK - For Dynamic DNS (Required) ###
-* Install ngrok for your OS via https://ngrok.com/download.
-* Run ngrok on port 5005 with the following command, and note the generated https url
+### Using Machaao tunnel to expose PORT (Required) ###
+* Run tunnel on port 5005 with the following command, and note the generated https url
 ```
-ngrok http 5005
+machaao tunnel -p 5005 -t <Chatbot-Api-Token>
 ```
 
 ### Update your webhook ###
-Update your bot url on MACHAAO with the NGROK url provided as shown below to continue development
+Update your bot Webhook URL on [MessengerX.io Portal](https://portal.messengerx.io) with the url provided as shown below to continue development
 ```
-curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR API-TOKEN> \
---header 'api_token: <YOUR API-TOKEN>' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "url": "<YOUR URL>/webhooks/machaao/incoming",
-    "description": "<YOUR BOT DESCRIPTION>",
-    "displayName": "<YOUR BOT NAME>"
-    }'
+Webhook Url: <TUNNEL-URL>/webhooks/machaao/incoming
 ```
+
+### Test your bot:
+Visit: ```https://dev.messengerx.io/<bot-name>```
 
 
 ### Re-Train the Sample Model after changes ###
@@ -127,22 +129,6 @@ heroku container:release web
 heroku open
 heroku logs --tail
 ```
-
-## Update your webhook ##
-Update your bot url on MACHAAO with the heroku url as shown below to continue development
-```
-curl --location --request POST 'https://ganglia-dev.machaao.com/v1/bots/<YOUR API-TOKEN> \
---header 'api_token: <YOUR API-TOKEN>' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "url": "<Your_Heroku_App_Name>.herokuapp.com/webhooks/machaao/incoming",
-    "description": "<YOUR BOT DESCRIPTION>",
-    "displayName": "<YOUR BOT NAME>"
-    }'
-```
-
-## Run on AWS ##
-Coming Soon
 
 ## Note ##
 Please not that this document isn't mean to be use as a guide for production environment setup and nor it's intended for that purpose.
