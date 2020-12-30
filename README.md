@@ -130,5 +130,11 @@ heroku open
 heroku logs --tail
 ```
 
+### Update your webhook ###
+Update your bot Webhook URL on [MessengerX.io Portal](https://portal.messengerx.io) with the heroku app url
+```
+Webhook Url: <APP-URL>/webhooks/machaao/incoming
+```
+
 ## Note ##
 Please not that this document isn't mean to be use as a guide for production environment setup and nor it's intended for that purpose.
