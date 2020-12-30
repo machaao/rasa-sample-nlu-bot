@@ -15,11 +15,11 @@ A [RASA sample web demo](https://dev.messengerx.io/rasa.sample) has been made av
 
 
 ## Requirements ##
-* Docker
 * Python 3.5+
-* Heroku Account (or local server)
 * MessengerX.io API Token
 * Rasa Core 2.2.0+
+* Docker (Optional for Remote Deployment)
+* Heroku Account (Optional for Remote Deployment)
 
 ## Get your FREE API Key ##
 * You can acquire a FREE API Key via https://messengerx.io 
