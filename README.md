@@ -5,7 +5,6 @@ The intent of the document is to provide with a quick and fast development setup
 
 This RASA based Sample NLU chatbot also intends to showcase various RCS-esque messaging options available on the Machaao Platform
 
-
 ![figure](images/sample_rasa_machaao_bot.jpeg)
 
 
@@ -13,6 +12,23 @@ This RASA based Sample NLU chatbot also intends to showcase various RCS-esque me
 A [RASA sample web demo](https://dev.messengerx.io/rasa.sample) has been made available for testing purposes
 
 ![figure](images/sample_rasa_web_bot.png)
+
+
+## Requirements ##
+* Docker
+* Python 3.5+
+* Heroku Account (or local server)
+* MessengerX.io API Token
+* Rasa Core 2.2.0+
+
+## Get your FREE API Key ##
+* You can acquire a FREE API Key via https://messengerx.io 
+or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credentials.yml
+```
+connectors.MachaaoConnector.MachaaoInputChannel:
+    api_token: <YOUR API-TOKEN>
+    base_url: "https://ganglia-dev.machaao.com"
+```
 
 ## Run on Local (from source) ##
 * Download or clone this repository
@@ -27,14 +43,7 @@ cd rasa-sample-nlu-bot
 pip install -r requirements.txt
 ```
 
-## Get your FREE API Key ##
-* You can acquire a FREE API Key via https://messengerx.io 
-or by [emailing us](mailto:connect@machaao.com) and replace it in the config/credentials.yml
-```
-connectors.MachaaoConnector.MachaaoInputChannel:
-    api_token: <YOUR API-TOKEN>
-    base_url: "https://ganglia-dev.machaao.com"
-```
+
 
 ### Start the RASA Action Service ###
 Start your the action service either in a separate terminal or in the same tab as a background process.<br>
@@ -79,8 +88,8 @@ rasa train --domain domain.yml
 ```
 
 
+## Run on Heroku (Optional - Not Production Setup) ##
 
-## Run on Heroku ##
 We are assuming you have access to a [heroku account](https://heroku.com)
 and have installed heroku command line client for your OS.
 
@@ -138,4 +147,4 @@ Please follow the SDK guide along with android + web integration sample @ https:
 
 ## Note ##
 Please not that this document isn't mean to be use as a guide for production environment setup and nor it's intended for that purpose.
-
+Running the RASA chat app on Heroku requires a 2X Instance.
