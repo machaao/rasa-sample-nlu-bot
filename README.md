@@ -146,5 +146,5 @@ Screenshot of the sample RASA chatbot running via our Android SDK
 Please follow the SDK guide along with android + web integration sample @ https://github.com/machaao/machaao-samples
 
 ## Note ##
-Please not that this document isn't mean to be use as a guide for production environment setup and nor it's intended for that purpose.
-Running the RASA chat app on Heroku requires a 2X Instance.
+* Please not that this document isn't mean to be use as a guide for production environment setup and nor it's intended for that purpose.
+* Running the RASA chat app on Heroku requires a 2X Instance.
