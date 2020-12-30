@@ -10,7 +10,7 @@ This RASA based Sample NLU chatbot also intends to showcase various RCS-esque me
 
 
 ## Web SDK Demo ##
-A [RASA sample web demo](https://ganglia-dev.machaao.com/rasa.sample) has been made available for testing purposes
+A [RASA sample web demo](https://dev.messengerx.io/rasa.sample) has been made available for testing purposes
 
 ![figure](images/sample_rasa_web_bot.png)
 
