@@ -1,13 +1,14 @@
 FROM ubuntu:18.04
-
-RUN apt-get update
-RUN apt-get install -y python3
-RUN apt-get install -y python3-pip
-RUN python3 -m pip install --upgrade pip
-RUN pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
+MAINTAINER Darren Yau
 
 COPY requirements.txt ./
-RUN pip3 install -r requirements.txt
+
+RUN apt-get update && apt-get install -y python3 python3-pip
+RUN python3 -m pip install --upgrade pip
+#RUN pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
+
+
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 ADD ./actions /app/actions/
 ADD ./data /app/data/

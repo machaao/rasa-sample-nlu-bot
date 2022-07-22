@@ -15,9 +15,9 @@ A [RASA sample web demo](https://dev.messengerx.io/rasa.sample) has been made av
 
 
 ## Requirements ##
-* Python 3.5+
+* Python 3.7, 3.8 Only (Rasa doesn't support - Python 3.9+)
 * MessengerX.io API Token
-* Rasa Core 2.2.0+
+* Rasa 3.0.4
 * Docker (Optional for Remote Deployment)
 * Heroku Account (Optional for Remote Deployment)
 
@@ -38,12 +38,18 @@ git clone git@github.com:machaao/rasa-sample-nlu-bot.git
 cd rasa-sample-nlu-bot
 ```
 
+* Setup venv
+```
+python3 -m venv ./venv --version=3.8
+source ./venv/bin/activate
+```
+
 * Install requirements
 ```bash
 pip install -r requirements.txt
 ```
-
-
+### For M1 Macbook (Conda maybe required - Instructions Pending) ####
+Refer to https://forum.rasa.com/t/an-unofficial-guide-to-installing-rasa-on-an-m1-macbook/51342
 
 ### Start the RASA Action Service ###
 Start your the action service either in a separate terminal or in the same tab as a background process.<br>
@@ -61,7 +67,7 @@ rasa run actions --actions actions &
 ### Start RASA Core Service ###
 Start rasa core and specify the custom connector.<br>
 ```
-rasa run -m models --debug --endpoints config/endpoints.yml --credentials config/credentials.yml --enable-api --cors “*” --connector "connectors.MachaaoConnector.MachaaoInputChannel"
+rasa run -m models --debug --endpoints config/endpoints.yml --credentials config/credentials.yml
 ```
 
 ### Using Machaao tunnel to expose PORT (Required) ###
@@ -107,7 +113,7 @@ heroku create
 
 ### Build the docker image ###
 ```
-docker build -t herokurasa .
+docker build -t rasa .
 ```
 
 ### Login to Heroku Container Service ###

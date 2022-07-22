@@ -1,2 +1,2 @@
-rasa==2.2.0
-machaao==0.2.0
+rasa==3.0.4
+machaao==0.3.5
