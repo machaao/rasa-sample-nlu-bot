@@ -1,23 +1,16 @@
 [![Gitter](https://badges.gitter.im/messengerx-io/community.svg)](https://gitter.im/messengerx-io/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  
 
-## A sample RASA chatbot template using MACHAAO Chat Apps Platform and Heroku ##
+## A sample RASA chatbot template using MACHAAO and Heroku ##
 The intent of the document is to provide with a quick and fast development setup guide for python developers looking to develop deeply personalized chat bots on Android & Web
 
 This RASA based Sample NLU chatbot also intends to showcase various RCS-esque messaging options available on the Machaao Platform
 
 ![figure](images/sample_rasa_machaao_bot.jpeg)
 
-
-## Web SDK Demo ##
-A [RASA sample web demo](https://dev.messengerx.io/rasa.sample) has been made available for testing purposes
-
-![figure](images/sample_rasa_web_bot.png)
-
-
 ## Requirements ##
-* Python 3.7, 3.8 Only (Rasa doesn't support - Python 3.9+)
 * MessengerX.io API Token
 * Rasa 3.0.4
+* Python 3.7, 3.8 Only
 * Docker (Optional for Remote Deployment)
 * Heroku Account (Optional for Remote Deployment)
 
@@ -30,7 +23,7 @@ connectors.MachaaoConnector.MachaaoInputChannel:
     base_url: "https://ganglia-dev.machaao.com"
 ```
 
-## Run on Local (from source) ##
+## Run on Local Machine (from source) ##
 * Download or clone this repository
 ```
 git clone git@github.com:machaao/rasa-sample-nlu-bot.git
@@ -38,10 +31,10 @@ git clone git@github.com:machaao/rasa-sample-nlu-bot.git
 cd rasa-sample-nlu-bot
 ```
 
-* Setup venv
+* Setup a dev virtual environment on your local machine
 ```
-python3 -m venv ./venv --version=3.8
-source ./venv/bin/activate
+python3 -m dev ./dev
+source ./dev/bin/activate
 ```
 
 * Install requirements
@@ -49,7 +42,10 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 ### For M1 Macbook (Conda maybe required - Instructions Pending) ####
-Refer to https://forum.rasa.com/t/an-unofficial-guide-to-installing-rasa-on-an-m1-macbook/51342
+Refer to 
+https://forum.rasa.com/t/an-unofficial-guide-to-installing-rasa-on-an-m1-macbook/51342
+
+Tensorflow setup instructions: https://developer.apple.com/metal/tensorflow-plugin/
 
 ### Start the RASA Action Service ###
 Start your the action service either in a separate terminal or in the same tab as a background process.<br>
@@ -93,6 +89,10 @@ rm -rf models/*
 rasa train --domain domain.yml
 ```
 
+## Web SDK Demo ##
+A [RASA sample web demo](https://dev.messengerx.io/rasa.sample) has been made available for testing purposes
+
+![figure](images/sample_rasa_web_bot.png)
 
 ## Run on Heroku (Optional - Not Production Setup) ##
 
@@ -143,14 +143,8 @@ Webhook Url: <YOUR-RASA-SERVER-URL>/webhooks/machaao/incoming
 
 * You can run the code as it is, and it will use the provided Sample Token.
 
-## Android Sample App Screenshot ##
-Screenshot of the sample RASA chatbot running via our Android SDK
-
-![figure](images/sample_rasa_android_bot.png)
-
-## SDK Integration Guide ##
-Please follow the SDK guide along with android + web integration sample @ https://github.com/machaao/machaao-samples
 
 ## Note ##
-* Please not that this document isn't mean to be use as a guide for production environment setup and nor it's intended for that purpose.
+* Please note that this document isn't mean to be use as a guide for production environment setup and nor it's intended for that purpose.
 * Running the RASA chat app on Heroku requires a 2X Instance.
+* Please [contact us](mailto:connect@machaao.com) for your Android APK
