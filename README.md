@@ -33,7 +33,7 @@ cd rasa-sample-nlu-bot
 
 * Setup a dev virtual environment on your local machine
 ```
-python3 -m dev ./dev
+python3 -m venv ./dev
 source ./dev/bin/activate
 ```
 
