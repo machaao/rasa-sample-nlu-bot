@@ -73,6 +73,7 @@ rasa run -m models --debug --endpoints config/endpoints.yml --credentials config
 ```
 
 ### Start RASA Action and Core Service (Windows) ###
+Start rasa service and rasa core services in separate terminals.<br>
 ```
 call local_start.bat
 ```
