@@ -53,27 +53,15 @@ https://forum.rasa.com/t/an-unofficial-guide-to-installing-rasa-on-an-m1-macbook
 
 Tensorflow setup instructions: https://developer.apple.com/metal/tensorflow-plugin/
 
-### Start the RASA Action Service ###
-Start your the action service either in a separate terminal or in the same tab as a background process.<br>
-
-* In a separate terminal:
+### Start the RASA Action Core Service ###
+Start the rasa action service(background) and core service in the terminal. 
 ```
-rasa run actions --actions actions
-```
-
-* Or as a background process:
-```
-rasa run actions --actions actions &
-```
-
-### Start RASA Core Service ###
-Start rasa core and specify the custom connector.<br>
-```
-rasa run -m models --debug --endpoints config/endpoints.yml --credentials config/credentials.yml
+chmod +x local_start.sh
+./local_start.sh
 ```
 
 ### Start RASA Action and Core Service (Windows) ###
-Start rasa service and rasa core services in separate terminals.<br>
+Start the rasa action and core services in separate terminals.<br>
 ```
 call local_start.bat
 ```
