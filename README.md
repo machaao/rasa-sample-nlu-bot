@@ -37,6 +37,12 @@ python3 -m venv ./dev
 source ./dev/bin/activate
 ```
 
+* Setup a dev virtual environment on your local machine (Windows)
+```
+python3 -m venv ./dev
+.\dev\Scripts\activate
+```
+
 * Install requirements
 ```bash
 pip install -r requirements.txt
@@ -64,6 +70,11 @@ rasa run actions --actions actions &
 Start rasa core and specify the custom connector.<br>
 ```
 rasa run -m models --debug --endpoints config/endpoints.yml --credentials config/credentials.yml
+```
+
+### Start RASA Action and Core Service (Windows) ###
+```
+call local_start.bat
 ```
 
 ### Using Machaao tunnel to expose PORT (Required) ###
