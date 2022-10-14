@@ -37,6 +37,12 @@ python3 -m venv ./dev
 source ./dev/bin/activate
 ```
 
+* Setup a dev virtual environment on your local machine (Windows)
+```
+python3 -m venv ./dev
+.\dev\Scripts\activate
+```
+
 * Install requirements
 ```bash
 pip install -r requirements.txt
@@ -47,23 +53,17 @@ https://forum.rasa.com/t/an-unofficial-guide-to-installing-rasa-on-an-m1-macbook
 
 Tensorflow setup instructions: https://developer.apple.com/metal/tensorflow-plugin/
 
-### Start the RASA Action Service ###
-Start your the action service either in a separate terminal or in the same tab as a background process.<br>
-
-* In a separate terminal:
+### Start the RASA Action Core Service ###
+Start the rasa action service(background) and core service in the terminal. 
 ```
-rasa run actions --actions actions
-```
-
-* Or as a background process:
-```
-rasa run actions --actions actions &
+chmod +x local_start.sh
+./local_start.sh
 ```
 
-### Start RASA Core Service ###
-Start rasa core and specify the custom connector.<br>
+### Start RASA Action and Core Service (Windows) ###
+Start the rasa action and core services in separate terminals.<br>
 ```
-rasa run -m models --debug --endpoints config/endpoints.yml --credentials config/credentials.yml
+call local_start.bat
 ```
 
 ### Using Machaao tunnel to expose PORT (Required) ###
