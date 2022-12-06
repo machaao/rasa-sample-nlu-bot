@@ -20,7 +20,7 @@ or by [emailing us](mailto:connect@machaao.com) and replace it in the config/cre
 ```
 connectors.MachaaoConnector.MachaaoInputChannel:
     api_token: <YOUR API-TOKEN>
-    base_url: "https://ganglia-dev.machaao.com"
+    base_url: "https://ganglia.machaao.com"
 ```
 
 ## Run on Local Machine (from source) ##
@@ -79,7 +79,7 @@ Webhook Url: <TUNNEL-URL>/webhooks/machaao/incoming
 ```
 
 ### Test your bot:
-Visit: ```https://dev.messengerx.io/<bot-name>```
+Visit: ```https://messengerx.io/<bot-name>```
 
 
 ### Re-Train the Sample Model after changes ###
@@ -90,7 +90,7 @@ rasa train --domain domain.yml
 ```
 
 ## Web SDK Demo ##
-A [RASA sample web demo](https://dev.messengerx.io/rasa.sample) has been made available for testing purposes
+[Bella by VisitorPlans.com](https://messengerx.io/vp) - Powered by RASA + MessengerX.io
 
 ![figure](images/sample_rasa_web_bot.png)
 
