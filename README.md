@@ -66,16 +66,15 @@ Start the rasa action and core services in separate terminals.<br>
 call local_start.bat
 ```
 
-### Using Machaao tunnel to expose PORT (Required) ###
-* Run tunnel on port 5005 with the following command, and note the generated https url
+### Using ngrok to expose PORT (Required) ###
 ```
-machaao tunnel -p 5005 -t <Chatbot-Api-Token>
+ngrok http 5005
 ```
 
 ### Update your webhook ###
 Update your bot Webhook URL on [MessengerX.io Portal](https://portal.messengerx.io) with the url provided as shown below to continue development
 ```
-Webhook Url: <TUNNEL-URL>/webhooks/machaao/incoming
+Webhook Url: <HTTPS-NGROK-TUNNEL-URL>/webhooks/machaao/webhook
 ```
 
 ### Test your bot:
@@ -138,7 +137,7 @@ heroku logs --tail
 ### Update your webhook ###
 Update your bot Webhook URL on [MessengerX.io Portal](https://portal.messengerx.io) with the heroku app url
 ```
-Webhook Url: <YOUR-RASA-SERVER-URL>/webhooks/machaao/incoming
+Webhook Url: <YOUR-RASA-SERVER-URL>/webhooks/machaao/webhook
 ```
 
 * You can run the code as it is, and it will use the provided Sample Token.
