@@ -88,8 +88,6 @@ rm -rf models/*
 rasa train --domain domain.yml
 ```
 
-## Web SDK Demo ##
-[Bella by VisitorPlans.com](https://messengerx.io/vp) - Powered by RASA + MessengerX.io
 
 ![figure](images/sample_rasa_web_bot.png)
 
